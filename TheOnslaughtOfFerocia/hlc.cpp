@@ -60,11 +60,15 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
         }
         else if (move == "intimidate" || move == "2" ){
         turn = true;
+        cout << "You intimidated the ";
+        cout << Ename;
+        cout << " causing their attack to weaken" << endl;
         Eatk = (Eatk/2);
         }
         
         else if(move == "nothing" || move == "3" ){
         turn = true;
+        cout << "You decide to do nothing" << endl;
         }
         
         else{
