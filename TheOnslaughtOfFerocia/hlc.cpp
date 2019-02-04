@@ -15,7 +15,7 @@ void combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat
     cout << Ename << endl;
     cout << endl;
     
-    while (Ehp > 0){                            //loop until enemy is dead
+    while (Hhp > 0 && Ehp > 0){                  //loop until enemy is dead
         string move;                            //deciding what the player does
         cout << "Hero health: ";
         cout << Hhp;
@@ -35,7 +35,7 @@ void combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat
         cout << "2. intimidate" << endl;
         cin >> move;
     
-        if (move == "atk" || move == "1"){       //start of atk
+        if (move == "atk" || move == "1"){       //start of player atk
             Ehp = Ehp - Hatk;
             cout << "You attack the " ;
             cout << Ename ;
@@ -43,16 +43,30 @@ void combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat
             cout << Ehp;
             cout << "/";
             cout << MaxEhp << endl;
-            cout << endl;
         }
         else{
             cout << "That is not an option" << endl;
         }
+        Hhp = Hhp - Eatk;                      //start of enemy atk
+            cout << "The ";
+            cout << Ename;
+            cout << " attacked you " ;            
+            cout << "  HP: ";
+            cout << Hhp;
+            cout << "/";
+            cout << MaxHhp << endl;
+            cout << endl;
+        
     }
     cout << "The ";
     cout << Ename;
     cout << " was defeated" << endl;
 }
+
+
+
+
+
 int main(){                                //main function, currently used to store stats as global variables
     int herohp = 20;                       //stats should be stored in database later
     int heroatk = 5;                       
