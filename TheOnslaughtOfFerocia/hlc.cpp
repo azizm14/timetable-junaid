@@ -37,6 +37,9 @@ void combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat
     
         if (move == "atk" || move == "1"){       //start of player atk
             Ehp = Ehp - Hatk;
+            if (Ehp < 0){
+            Ehp = 0;
+            }
             cout << "You attack the " ;
             cout << Ename ;
             cout << "  HP: ";
@@ -48,6 +51,9 @@ void combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat
             cout << "That is not an option" << endl;
         }
         Hhp = Hhp - Eatk;                      //start of enemy atk
+        if (Hhp < 0){
+        Hhp = 0;
+        }
             cout << "The ";
             cout << Ename;
             cout << " attacked you " ;            
@@ -69,7 +75,7 @@ void combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat
 
 int main(){                                //main function, currently used to store stats as global variables
     int herohp = 20;                       //stats should be stored in database later
-    int heroatk = 5;                       
+    int heroatk = 7;                       
     
     string enemyname = "Orc";
     int enemyhp = 10;
