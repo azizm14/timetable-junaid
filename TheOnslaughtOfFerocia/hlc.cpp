@@ -36,6 +36,7 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
         
         if (Hhp < 0){                //End loop if hero is dead
             Hhp == 0;
+            
             return Hhp;
             }
         
@@ -44,6 +45,7 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
         cout << "1. attack " << endl;
         cout << "2. intimidate" << endl;
         cout << "3. nothing" << endl;
+        cout << "4. retreat" << endl;
         cin >> move;
         cout << endl;
         if (move == "attack" || move == "1"){       //start of player atk
@@ -54,7 +56,7 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
             }
             cout << "You attack the " ;
             cout << Ename;
-            cout << " and dealt ";
+            cout << " and deal ";
             cout << Hatk;
             cout << " damage" << endl;            
         }
@@ -71,6 +73,12 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
         cout << "You decide to do nothing" << endl;
         }
         
+        else if(move == "retreat" || move == "4") {
+            turn = true;
+            cout << "You fled the fight" << endl;
+            return Hhp;
+        }    
+            
         else{
             cout << "That is not an option" << endl;
         }
@@ -88,8 +96,10 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
         cout << MaxEhp << endl;
         cout << endl;
         
-        if (Ehp == 0){
-            return Hhp;
+        if (Ehp <= 0){
+                   
+            cout << "The " << Ename << " was defeated" << endl;
+            return Hhp;       
             }
         else{
         Hhp = Hhp - Eatk;                      //start of enemy atk
@@ -98,8 +108,8 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
         }
             cout << "The ";
             cout << Ename;
-            cout << " attacked you";
-            cout << " and dealt ";
+            cout << " attacks you";
+            cout << " and deals ";
             cout << Eatk;
             cout << " damage" << endl; 
             cout << endl;
@@ -121,18 +131,16 @@ int main(){                                //main function, currently used to st
     int enemyatk = 8;
     
     herohp = combat(herohp,heroatk,enemyname,enemyhp,enemyatk);      //call combat function
-        if (herohp !=0){
-            cout << "The ";
-            cout << enemyname;
-            cout << " was defeated" << endl;
-            cout << "Remaining hero hp: ";
-            cout << herohp << endl;
-    }
-        else{
+        if (herohp ==0){
             cout << "You were defeated by the ";
             cout << enemyname << endl;
             cout << endl;
             cout << "GAME OVER" << endl;
+            
+    }
+        else{                     
+            cout << endl;
+            cout << "Remaining hero hp: " << herohp << endl;
             
     }
     cout << endl;
