@@ -46,6 +46,7 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
         cout << "2. intimidate" << endl;
         cout << "3. nothing" << endl;
         cout << "4. retreat" << endl;
+        cout << "5. item" << endl;
         cin >> move;
         cout << endl;
         if (move == "attack" || move == "1"){       //start of player atk
@@ -56,7 +57,7 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
             }
             cout << "You attack the " ;
             cout << Ename;
-            cout << " and deal ";
+            cout << " and dealt ";
             cout << Hatk;
             cout << " damage" << endl;            
         }
@@ -77,6 +78,16 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
             turn = true;
             cout << "You fled the fight" << endl;
             return Hhp;
+        }    
+        
+        else if(move == "item" || move == "5") {
+            turn = true;
+            cout << "You use an item to heal yourself" << endl;
+            Hhp = Hhp + 10;
+            if (Hhp >= MaxHhp){
+                Hhp = MaxHhp;
+            }
+                
         }    
             
         else{
@@ -123,7 +134,7 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
 
 
 int main(){                                //main function, currently used to store stats as global variables
-    int herohp = 20;                       //stats should be stored in database later
+    int herohp = 30;                       //stats should be stored in database later
     int heroatk = 5;                       
     
     string enemyname = "Orc";
