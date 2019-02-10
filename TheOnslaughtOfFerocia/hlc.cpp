@@ -4,6 +4,7 @@
 #include <vector>
 #include <cstring>
 #include <string>
+#include <list>
 using namespace std;
 
 
@@ -81,9 +82,21 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
         }    
         
         else if(move == "item" || move == "5") {
+            string item;
             turn = true;
-            cout << "You use an item to heal yourself" << endl;
-            Hhp = Hhp + 10;
+            cout << "What item would you like to use?" << endl;
+            cout << "1. small potion" <<endl;
+            cout << "2. large potion" <<endl;
+            cin >> item;
+            if (item == "1" || item == "small potion"){
+                cout << "You use a small potion to heal yourself for 10 health" << endl;
+                Hhp = Hhp + 10;}
+            else if (item == "2" || item == "small potion"){
+                cout << "You use a large potion to heal yourself" << endl;
+                Hhp = Hhp + 25;}
+            else{
+                cout << "That is not a useable item" <<endl;
+            }
             if (Hhp >= MaxHhp){
                 Hhp = MaxHhp;
             }
