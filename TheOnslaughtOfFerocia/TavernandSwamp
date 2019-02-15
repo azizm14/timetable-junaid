@@ -1,0 +1,79 @@
+int tavernchoice_0;
+while (true) {
+
+	if (tavernchoice_0 == 1) {
+
+		look_around_tavern()
+		
+
+	}
+
+	else if (tavernchoice_0 == 2) {
+
+		talk_to_barkeeper();
+
+	}
+
+
+	else {
+
+		cout << "That is not an option" << endl;
+
+	}
+
+
+
+
+
+
+int tavernchoice_0;
+while (true) {
+
+	if (tavernchoice_0 == 1) {
+
+		look_around_tavern()
+		
+
+	}
+
+	else if (tavernchoice_0 == 2) {
+
+		talk_to_barkeeper();
+
+	}
+
+
+	else {
+
+		cout << "That is not an option" << endl;
+
+	}
+
+int outtownchoice_0,swampchoice_0;
+while (true) {
+
+	if (outtownchoice_0 == 1) {
+
+		forest();
+		
+
+	}
+
+	else if (outtownchoice_0 == 2) {
+
+		swamp();
+
+	}
+		if (swampcoice_0==1){
+			attack();
+		else if (swampcoice_0==2){
+			run_away();
+		else if (swampcoice_0==3){
+			intimidate();
+
+
+	else {
+
+		cout << "That is not an option" << endl;
+
+	}
