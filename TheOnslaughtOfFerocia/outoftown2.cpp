@@ -1,5 +1,16 @@
 
-void out_town() {
+#include <iostream>
+#include <vector>
+#include <string>	
+
+
+
+using namespace std;	
+
+void out_town() 
+  
+  
+{
 	string choice_0;
   
 	cout << "OUT OF TOWN" << endl;
@@ -9,6 +20,9 @@ void out_town() {
 	cout << " suddenly you collaps..." << endl;
 	cout << "waking up later you find out that you are in a deserted park there is no life to be seen" << endl;
 	cout << "you decide to walk forward on coming you see" << endl;
+  
+}
+  
   {
     std::cout << R"(    
 
@@ -24,19 +38,23 @@ void out_town() {
 
         
         )" ;
-}
+  }
 
   
-  
+{
 	cout << "a forest towards you left and a swamp towards your right, which do you choose: " << endl;
   cout << "Please type Forest or Swamp " << endl;
-	cin >> choice_11;
   
+}
+    
+{
+	cin >> choice_11;
+
   
 	if (choice_11 == "Forest" || choice_11 == "forest" || choice_11 == "FOREST" || choice_11 == "for") {
 		cout << "As you are walking into the forest you can smell the fresh breaze of air..." << endl;
 		cout << "you can also hear the birds over head....." << endl;
-    
+  }
     
      {
     std::cout << R"(    
@@ -71,7 +89,7 @@ void out_town() {
     
     
     
-    
+  {
 		cout << "everything seems to be going fine you are enjoying atmosphere" << endl;
 		cout << "however you accidently knock over a stone this triggers the ground to rumble" << endl;
 		cout << "you start to panic and therfore decide to....." << endl;
@@ -89,6 +107,9 @@ void out_town() {
 		cout << "is leaves and bones on the floor it all looks unusal to you" << endl;
     cout << "as you walk forward towards the waters you meet a hunched over creature it looks at you" << endl;
     cout << "and snarls, you realise the gollum" << endl;
+    
+    
+  }
      {
     std::cout << R"(    
 
@@ -114,11 +135,11 @@ void out_town() {
   
         )" ;
 }
-    
+  {
     
     cout << "is aggravated it wants to fight" << endl;
     cout << "do you wish to attack " << endl;
-
+  }
  
     cin >> choice_33;
 // this part is for attacking Hao-lam to add his combat section
@@ -136,6 +157,7 @@ void out_town() {
 	//They dont wish to go to the swamp which means they must prepare for the next war
 	if (choice_33 == "Yes" || choice_33 == "yes" || choice_33 == "Yes" || choice_33 == "yesss") 
     
+  {
     
 		cout << "you've managed to kill the gollum" << endl;
 		cout << "however after killing the gollum the sky falls dark" << endl;
