@@ -8,12 +8,56 @@
 #include <stdlib.h>
 using namespace std;
 
+int attack(int ATK, int HP, bool Char){
+  bool crit = false;
+  int hit;
+  hit = rand() % 10 + 1;
+  cout << hit <<endl;
+  if (hit < 2){
+    if (Char == true){ 
+      cout << "Your attack missed the enemy" <<endl;
+    }
+    else{
+      cout << "The enemy's attack missed you" <<endl;
+    }
+   }
+   else if (hit >= 2 && hit < 10){
+     HP = HP - ATK;
+      if (Char == true){ 
+      cout << "You dealt ";
+      cout << ATK;
+      cout << " damage" << endl;
+    }
+    else{
+      cout << "You took ";
+      cout << ATK;
+      cout << " damage" << endl;
+    }
+   }
+   else {
+      crit = true;
+      HP = HP - ATK*2;
+     if (Char == true){ 
+      cout << "A critical hit!! You dealt ";
+      cout << ATK * 2;
+      cout << " damage" << endl;
+    }
+    else{
+      cout << "A critical hit!! You took ";
+      cout << ATK * 2;
+      cout << " damage" << endl;
+    }
+   }
+   if (HP < 0){
+      HP = 0;
+   }
+   return HP;
+}
 
 int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat function
     int MaxHhp = Hhp;                             //store hero max HP
     int MaxEhp = Ehp;                             //store enemy max HP
-    int hit;
-    bool crit;
+    int hit;    
   
     cout << endl;
     cout << "You encounter a(n) ";
@@ -53,32 +97,7 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
           
           if (move == "attack" || move == "1"){       //start of player atk
             turn = true;
-            crit = false;
-            hit = rand() % 10 + 1;
-          
-            if (hit < 2){
-              cout << "You missed the enemy";
-            }
-            else if (hit >= 2 && hit < 10){
-              Ehp = Ehp - Hatk;
-            }
-            else {
-              crit = true;
-              Ehp = Ehp - Hatk*2;
-            }
-            if (Ehp < 0){
-              Ehp = 0;
-            }
-            cout << "You attack the " ;
-            cout << Ename;
-            cout << " and dealt ";
-            if (crit == true){
-              cout << Hatk*2;
-            }
-            else{
-              cout << Hatk;
-            }
-            cout << " damage" << endl;      
+            Ehp = attack(Hatk,Ehp,true);    
           }
           
           else if (move == "intimidate" || move == "2" ){
@@ -146,17 +165,10 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
             return Hhp;       
         }
         else{
-          Hhp = Hhp - Eatk;                      //start of enemy atk
+          Hhp = attack(Eatk,Hhp,false);                      //start of enemy atk
         if (Hhp < 0){
           Hhp = 0;
         }
-        cout << "The ";
-        cout << Ename;
-        cout << " attacks you";
-        cout << " and deals ";
-        cout << Eatk;
-        cout << " damage" << endl; 
-        cout << endl;
     }
     }
     }
