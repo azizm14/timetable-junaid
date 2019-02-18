@@ -3,15 +3,18 @@
 #include <vector>
 #include <string>	
 
-
-
 using namespace std;	
 
 void out_town() 
-  
-  
+
 {
-	string choice_0;
+  
+string choice11,choice_22,choice_33 ;
+  
+  
+ choice_0 
+  choice_11
+ 
   
 	cout << "OUT OF TOWN" << endl;
 
@@ -20,9 +23,7 @@ void out_town()
 	cout << " suddenly you collaps..." << endl;
 	cout << "waking up later you find out that you are in a deserted park there is no life to be seen" << endl;
 	cout << "you decide to walk forward on coming you see" << endl;
-  
-}
-  
+ 
   {
     std::cout << R"(    
 
@@ -51,7 +52,8 @@ void out_town()
 	cin >> choice_11;
 
   
-	if (choice_11 == "Forest" || choice_11 == "forest" || choice_11 == "FOREST" || choice_11 == "for") {
+	if (choice_11 == "Forest" || choice_11 == "forest" || choice_11 == "FOREST" || choice_11 == "for")
+  {
 		cout << "As you are walking into the forest you can smell the fresh breaze of air..." << endl;
 		cout << "you can also hear the birds over head....." << endl;
   }
@@ -87,8 +89,6 @@ void out_town()
 }
     
     
-    
-    
   {
 		cout << "everything seems to be going fine you are enjoying atmosphere" << endl;
 		cout << "however you accidently knock over a stone this triggers the ground to rumble" << endl;
@@ -98,17 +98,17 @@ void out_town()
     cin >> choice_22;
 	}
 
-  
 	// this option will give the use of combat code to be implemnted 
 
 	if (choice_22 == "Yes" || choice_22 == "yes" || choice_22 == "Yes" || choice_22 == "yesss") 
+    
   {
+   
 		cout << "You have now entered a swamp, you look around all you can see " << endl;
 		cout << "is leaves and bones on the floor it all looks unusal to you" << endl;
     cout << "as you walk forward towards the waters you meet a hunched over creature it looks at you" << endl;
     cout << "and snarls, you realise the gollum" << endl;
-    
-    
+      
   }
      {
     std::cout << R"(    
@@ -129,10 +129,6 @@ void out_town()
 `"-'` ~`  ccc.'   __.','     \j\L\
                  .='/|\7      
                 ' `
-
-
-
-  
         )" ;
 }
   {
@@ -153,7 +149,6 @@ void out_town()
 	// End the game 
 	
   
-	 
 	//They dont wish to go to the swamp which means they must prepare for the next war
 	if (choice_33 == "Yes" || choice_33 == "yes" || choice_33 == "Yes" || choice_33 == "yesss") 
     
@@ -163,8 +158,7 @@ void out_town()
 		cout << "however after killing the gollum the sky falls dark" << endl;
 		cout << "many more creatures start to approach you" << endl;
 	}
-
-     {
+  
     std::cout << R"(    
 
 ######################~~..'|.##############.|`..~~#######################
@@ -191,19 +185,13 @@ void out_town()
 ###        #######  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  #######       ###
 
         )" ;
-}
-
-
-  
-}
-
 
 // Comments on the next war that they are going to 
 
-
 {
+
   cout << "After realising that they are many creatures from unknown sources you have decided that you are going to go back in to the town" << endl;
 	cout << "and grow strong and prepare for the war " << endl;
 	cout << "you are now back in the main town....." << endl;
-
 }
+
