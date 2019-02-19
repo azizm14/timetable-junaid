@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include <vector>
 #include <string>	
@@ -7,8 +6,7 @@ using namespace std;
 
 void out_town(){
   
-string choice_33;
-int choice_11 = 0, choice_22;
+int choice_11 = 0, choice_22, choice_33;
  
   
 	cout << "OUT OF TOWN" << endl;
@@ -31,7 +29,7 @@ int choice_11 = 0, choice_22;
         )" ;
   
 	cout << "a forest towards you left and a swamp towards your right, which do you choose: " << endl;
-  cout << "1. Forest\n2. Swamp " << endl;
+  cout << "1. Forest" << endl;
   cin >> choice_11;
   
 	if (choice_11 == 1)
@@ -95,22 +93,26 @@ int choice_11 = 0, choice_22;
         )" ;
     cout << "is aggravated it wants to fight" << endl;
     cout << "do you wish to attack " << endl;
+    cout << "please choose 1 = yes 2 = no" << endl;
     cin >> choice_33;
 // this part is for attacking Hao-lam to add his combat section
+
+   if (choice_33 == 1){
     cout << "you've managed to kill the gollum" << endl;
 		cout << "however after killing the gollum the sky falls dark" << endl;
 		cout << "many more creatures start to approach you" << endl;
+    cout << "therefore you decide to go back to the main town and prepare for war" <<endl;
     
-	}else{
+	}
+    else{
 		cout << "That is unfortunately not an option" << endl;
 	}}
 	// End the game 
 	
   
 	//They dont wish to go to the swamp which means they must prepare for the next war
-	if (choice_11 == 2)   
-  {
-    cout << "Instead of going to the swamp..." << endl;
+	if (choice_11 == 2){
+    cout << "Instead of going to the swamp... you go back to the main to prepare for the next war" << endl;
     //you prepare for the next war
     //IF STATEMENT NEEDS COMPLETING
     std::cout << R"(    
@@ -147,10 +149,8 @@ int choice_11 = 0, choice_22;
 	cout << "you are now back in the main town....." << endl;
   }
 }
+}
 
 int main(){
   out_town();
 }
-
-
-
