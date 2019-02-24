@@ -12,7 +12,6 @@ int attack(int ATK, int HP, bool Char){
   bool crit = false;
   int hit;
   hit = rand() % 10 + 1;
-  cout << hit <<endl;
   if (hit < 2){
     if (Char == true){ 
       cout << "Your attack missed the enemy" <<endl;
@@ -21,9 +20,9 @@ int attack(int ATK, int HP, bool Char){
       cout << "The enemy's attack missed you" <<endl;
     }
    }
-   else if (hit >= 2 && hit < 10){
+   else if (hit >= 2 && hit < 8){
      HP = HP - ATK;
-      if (Char == true){ 
+    if (Char == true){ 
       cout << "You dealt ";
       cout << ATK;
       cout << " damage" << endl;
@@ -52,6 +51,32 @@ int attack(int ATK, int HP, bool Char){
       HP = 0;
    }
    return HP;
+}
+
+int heal(int HP){
+  string item;
+  while (true) {
+    cout << "What item would you like to use?" << endl;
+    cout << "1. small potion" <<endl;
+    cout << "2. medium potion" <<endl;
+    cout << "3. large potion" <<endl;
+    cin >> item;
+    if (item == "1" || item == "small potion"){
+      cout << "You use a small potion to heal yourself for 10 health" << endl;
+      return (HP = HP + 10);
+    }
+    else if (item == "2" || item == "medium potion"){
+      cout << "You use a large potion to heal yourself" << endl;
+      return(HP = HP + 18);
+    }
+    else if (item == "3" || item == "large potion"){
+      cout << "You use a large potion to heal yourself" << endl;
+      return(HP = HP + 25);
+    }
+    else{
+    cout << "That is not a useable item" <<endl;
+    }
+  }
 }
 
 int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat function
@@ -120,23 +145,9 @@ int combat(int Hhp,int Hatk,string Ename,int Ehp,int Eatk){   //start of combat 
           }    
         
           else if(move == "item" || move == "5") {
-            string item;
+            
             turn = true;
-            cout << "What item would you like to use?" << endl;
-            cout << "1. small potion" <<endl;
-            cout << "2. large potion" <<endl;
-            cin >> item;
-            if (item == "1" || item == "small potion"){
-                cout << "You use a small potion to heal yourself for 10 health" << endl;
-                Hhp = Hhp + 10;
-            }
-            else if (item == "2" || item == "small potion"){
-                cout << "You use a large potion to heal yourself" << endl;
-                Hhp = Hhp + 25;
-            }
-            else{
-                cout << "That is not a useable item" <<endl;
-            }
+            Hhp = heal(Hhp);
             if (Hhp >= MaxHhp){
                 Hhp = MaxHhp;
             }
