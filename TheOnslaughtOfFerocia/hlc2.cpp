@@ -175,16 +175,14 @@ using namespace std;
 	}
 
 
-
-
-
+	
 
 	//IVE RENAMED THE MAIN FUNCTION TO "TEST" SO I COULD TEST IT
 int test() {                                //main function, currently used to store stats as global variables
 	int herohp = 30;                       //stats should be stored in database later
 	int heroatk = 5;
 
-	string enemyname = enemy;
+	string enemyname = "Orc";
 	int enemyhp = 10;
 	int enemyatk = 6;
 
