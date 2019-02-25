@@ -66,11 +66,11 @@ int heal(int HP){
       return (HP = HP + 10);
     }
     else if (item == "2" || item == "medium potion"){
-      cout << "You use a large potion to heal yourself" << endl;
+      cout << "You use a medium potion to heal yourself for 18 health" << endl;
       return(HP = HP + 18);
     }
     else if (item == "3" || item == "large potion"){
-      cout << "You use a large potion to heal yourself" << endl;
+      cout << "You use a large potion to heal yourself for 25 health" << endl;
       return(HP = HP + 25);
     }
     else{
