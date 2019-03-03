@@ -1,4 +1,4 @@
-//#include "stdafx.h"
+//#include "stdafx.h"       //Visual Studios
 #include <iostream>
 #include <sstream>
 #include <vector>
@@ -8,11 +8,13 @@
 #include <stdlib.h>
 using namespace std;
 
-int attack(int ATK, int HP, bool Char){
+int attack(int ATK, int HP, bool Char){       //Method for attacking
   bool crit = false;
   int hit;
-  hit = rand() % 10 + 1;
-  if (hit < 2){
+  int dmg;
+  hit = rand() % 10 + 1;                     //Random number generated from 1 to 10
+  dmg = rand() % ATK + ATK/2;
+  if (hit < 2){                              //Missing the hit
     if (Char == true){ 
       cout << "Your attack missed the enemy" <<endl;
     }
@@ -20,30 +22,30 @@ int attack(int ATK, int HP, bool Char){
       cout << "The enemy's attack missed you" <<endl;
     }
    }
-   else if (hit >= 2 && hit < 8){
-     HP = HP - ATK;
+   else if (hit >= 2 && hit < 8){           //Successful hit
+     HP = HP - dmg;
     if (Char == true){ 
       cout << "You dealt ";
-      cout << ATK;
+      cout << dmg;
       cout << " damage" << endl;
     }
     else{
       cout << "You took ";
-      cout << ATK;
+      cout << dmg;
       cout << " damage" << endl;
     }
    }
    else {
       crit = true;
-      HP = HP - ATK*2;
+      HP = HP - dmg*2;
      if (Char == true){ 
       cout << "A critical hit!! You dealt ";
-      cout << ATK * 2;
+      cout << dmg * 2;
       cout << " damage" << endl;
     }
     else{
       cout << "A critical hit!! You took ";
-      cout << ATK * 2;
+      cout << dmg * 2;
       cout << " damage" << endl;
     }
    }
