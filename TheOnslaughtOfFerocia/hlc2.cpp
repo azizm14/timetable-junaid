@@ -200,3 +200,24 @@ int test() {                                //main function, currently used to s
 	cout << endl;
 	return 0;
 }
+
+int test2() {
+	int herohp = 30;
+	int heroatk = 5;
+
+	string enemyname = "Elf";
+	int enemyhp = 10;
+	int enemyatk = 6;
+
+	herohp = combat(herohp, heroatk, enemyname, enemyhp, enemyatk);
+	if (herohp == 0) {
+		std::cout << "you were defeated by the " << enemyname << std::endl;
+		std::cout << "GAME OVER" << std::endl;
+	}
+	else {
+		std::cout << std::endl;
+		std::cout << "Remaining hero hp: " << herohp << std::endl;
+	}
+	std::cout << std::endl;
+	return 0;
+}
