@@ -7,5 +7,6 @@ int attack();
 int combat();
 int test();
 int test2();
+int final_battle();
 
 #endif // !HLC2_H
