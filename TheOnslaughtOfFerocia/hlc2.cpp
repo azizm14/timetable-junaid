@@ -182,7 +182,7 @@ int test() {                                //main function, currently used to s
 	int herohp = 30;                       //stats should be stored in database later
 	int heroatk = 5;
 
-	string enemyname = "Orc";
+	string enemyname = "Gollum";
 	int enemyhp = 10;
 	int enemyatk = 6;
 
