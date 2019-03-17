@@ -22,29 +22,15 @@ class Art{
   }
   void bird(){
     std::cout << R"(    
-                            /"  /"  /";
-                           /  /`  /` /
-                          / /  / ` /`
-                         /         ~;
-                        <           ;
-                         \           ;
-                          ;          ;
-                          ;          ;
-                         ;          /   /^\
-                     ___/-,.   __ /`  /`   \
-      /~a`~-,__,_,-~`         "`~~-_ `     |
-"""""`-___,,.,_,__                    ~-,_ }
-                  `~`~""`~-,_          _)_`~`~-,__ _-\,
-                     ;`      `~~`\~"``"  "~`~~`~~```""`
-                    /             ;  `\,/`
-                   |             ;
-                   ;            ;
-                  /            ;
-                  `|_          ;
-                    `|         ;
-                     ;  \ \ \ ;
-                     ;|`\; \\``
-                     ``  "  "
+    
+                        | 
+____________    __ -+-  ____________ 
+\_____     /   /_ \ |   \     _____/
+ \_____    \____/  \____/    _____/
+  \_____                    _____/
+     \___________  ___________/
+               /____\
+                           
         )" ;
   }
   void gollum(){
@@ -68,28 +54,24 @@ class Art{
   }
   void creatures(){
     std::cout << R"(    
-######################~~..'|.##############.|`..~~#######################
-##############~./`.~~./' ./ ################ \. `\. ~~.`\.~##############
-############~.' `.`-'   /   ~#############~ .  \   `-'.'  `.~############
-##########~.'    |     |  .'\ ~##########~ /`.  |     |     `.~##########
-########~.'      |     |  |`.`._ ~####~ _.'.'|  |     |       `.~########
-######~.'        `.    |  `..`._|\.--./|_.'..'  |    .'         `.~######
-####~.'            \   | #.`.`._`.'--`.'_.'.'.# |   /             `.~####
-##~.'       ......  \  | ###.`~'(o\||/o)`~'.### |  /  ......        `.~##
-~.`.......'~      `. \  \~####  |\_  _/|  ####~/  / .'      ~`........'.~
-;.'                 \ .----.__.'`(n||n)'`.__.----. /                  `;
-`.                  .'    .'   `. \`'/ .'   `.    `.                  .'
-#:               ..':      :    '. ~~ .`    :      :`..               :#
-#:             .'   :     .'     .'  `.     `.     :   `.             :#
-#:           .'    .`   .'       . || .       `.   '.    `.           :#
-#:         .'    .' :       ....'      `....       : `.    `.         :#
-#:       .'    .' ) )        (      )     (      (    )`.    `.       :#
-#:     ..'    .  ( ((   )  ) )) (  ((  (  ))  )  ))  ((  `.   `..     :#
-#:  ..'      .'# ) ) ) (( ( ( (  ) ) ) ))( ( (( ( (  ) ) #`.     `..  :#
-#;.'        .'##|((  ( ) ) ) ) )( (  (( ( ) )) ) ) )( (||##`.       `.:#
-#`.        .'###|\__  )( (( ( ( )  )  )) )  (  (( ( )_)/|###`.       .'#
-##.`       '#####\__~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~__/#####`      '.##
-###        #######  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~  #######       ###
+      -. -. `.  / .-' _.'  _
+     .--`. `. `| / __.-- _' `
+    '.-.  \  \ |  /   _.' `_
+    .-. \  `  || |  .' _.-' `.
+  .' _ \ '  -    -'  - ` _.-.
+   .' `. %%%%%   | %%%%% _.-.`-
+ .' .-. ><(@)> ) ( <(@)>< .-.`.
+   (("`(   -   | |   -   )'"))
+  / \\#)\    (.(_).)    /(#//\
+ ' / ) ((  /   | |   \  )) (`.`.
+ .'  (.) \ .md88o88bm. / (.) \)
+   / /| / \ `Y88888Y' / \ | \ \
+ .' / O  / `.   -   .' \  O \ \\
+  / /(O)/ /| `.___.' | \\(O) \
+   / / / / |  |   |  |\  \  \ \
+   / / // /|  |   |  |  \  \ \  VK
+ _.--/--/'( ) ) ( ) ) )`\-\-\-._
+( ( ( ) ( ) ) ( ) ) ( ) ) ) ( ) )
         )" ;
   }
 };
@@ -97,88 +79,118 @@ class Art{
 void out_town(){
   Art callArt;
   
-int choice_11 = 0, choice_22, choice_33;
- 
-  
-	cout << "OUT OF TOWN" << endl;
+int choice_11 = 0, choice_22, choice_33,age;
 
+	cout << "OUT OF TOWN" << endl;
 	cout << "You have decided to head out of town...." << endl;
 	cout << "as you are walking you realise that you start to feel dizzy" << endl;
 	cout << " suddenly you collapse..." << endl;
 	cout << "waking up later you find out that you are in a deserted park there is no life to be seen" << endl;
 	cout << "you decide to walk forward on coming you see" << endl;
-  callArt.printLandscape();
-  
-  
-  
-	cout << "a forest towards you left and a swamp towards your right, which do you choose: " << endl;
-  cout << "1. Forest" << endl;
-  cin >> choice_11;
-  
+	callArt.printLandscape();
+	cout << "A forest towards you left and a swamp towards your right, Your jorney starts.... " << endl;
+	cout << "1. Please Enter '1' to visit the foresr or -1 to exit the game" << endl;
+	cin >> choice_11;
+
 	if (choice_11 == 1)
-  {
+	{
 		cout << "As you are walking into the forest you can smell the fresh breeze of air..." << endl;
 		cout << "you can also hear the birds over head....." << endl;
-    callArt.bird();
-    
-    
+		callArt.bird();
 		cout << "everything seems to be going fine you are enjoying atmosphere" << endl;
-		cout << "however you accidently knock over a stone this triggers the ground to rumble" << endl;
+		cout << "however a stone is kicked by your foot this triggers the ground to rumble" << endl;
+    cout << "you hear all of the creatures awakening"<<endl;
 		cout << "you start to panic and therefore decide to....." << endl;
 		cout << "run back to where you came from, you now have an option do you wish to go the swamp instead" << endl;
-    cout << "Please type Yes or No" << endl;
-    cout << "1. Yes\n2. No" << endl;
-    cin >> choice_22;
-	// this option will give the use of combat code to be implemnted 
-	if (choice_22 == 1){
-		cout << "You have now entered a swamp, you look around all you can see " << endl;
-		cout << "is leaves and bones on the floor it all looks unusal to you" << endl;
-    cout << "as you walk forward towards the waters you meet a hunched over creature it looks at you" << endl;
-    cout << "and snarls, you realise it's gollum" << endl;
-    callArt.gollum();
-    
-    
-    cout << "is aggravated it wants to fight" << endl;
-    cout << "do you wish to attack " << endl;
-    cout << "please choose 1 = yes 2 = no" << endl;
-    cin >> choice_33;
-// this part is for attacking Hao-lam to add his combat section
+		cout << "Please type Yes, No, Maybe" << endl;
+		cout << "1. Yes\n2. No\n3.Maybe" << endl;
+		cin >> age;
 
-   if (choice_33 == 1){
-    cout << "you've managed to kill the gollum" << endl;
-		cout << "however after killing the gollum the sky falls dark" << endl;
-		cout << "many more creatures start to approach you" << endl;
-    cout << "therefore you decide to go back to the main town and prepare for war" <<endl;
-    callArt.creatures();
+    {
 
+    switch(age)
+    {
+        case 1:
+            cout << "You have decided to go into the swamps" << endl;
+            break; // end of case will run case 2 , 3 and default
+        case 2:
+            cout << "You are to far out to say no..... you will have to enter" << endl;
+            break;  // end of case will run case 3 and default
+        case 3:
+            cout << "having a unstable mind this means we deicde to send you in" << endl;
+            break;  // end of case will run defaul only
+        default:
+            cout << "sorry this is'nt a available option n" << endl;
+
+    }
+
+}
     
-	}
-    else{
-		cout << "That is unfortunately not an option" << endl;
-	}}
-	// End the game 
+    {
+			cout << "You look around all you can see....... " << endl;
+			cout << "is leaves and bones on the floor it all looks unusal to you" << endl;
+			cout << "as you walk forward towards the waters you meet some hunched back over looking creatures they look at you" << endl;
+			cout << " thye snarl, you realise that they are gollums" << endl;
+      cout<< "you actually realise that they are a few, i can inform they are of ages:" << endl;
+      
+      {
+        
+    srand(time(0)); // a random number from the clock - every time game played ensures new number generated
+
+    for (int x = 1; x<5;x++){
+        cout << 1+(rand()%10)<<"years old"<< endl;
+      // using a rand generator but i cant have zero age so i added 1 
+      // decrease the age i used modulus function 
+    }
+
+}
+
+			callArt.gollum();
+
+			cout << "they are aggravated and want to fight" << endl;
+			cout << "do you wish to attack " << endl;
+      
+		attack_choice:
+      
+			cout << "please choose 1 = yes 2 = no" << endl;
+      
+			cin >> choice_33;
+
+			if (choice_33 == 1) {
+//the file combat_start is called here.
+				Art run;
+			//	run.Combat_Start();
+				//test();
+				//weapons();
+				cout << "you've managed to kill the gollum" << endl;
+				cout << "however after killing the gollum the sky falls dark" << endl;
+				cout << "many more creatures start to approach you" << endl;
+        
+        
+        
+				cout << "therefore you decide to go back to the main town and prepare for war" << endl;
+				callArt.creatures();
+				//quest2();
+			}
+			else if (choice_33 == 2) {
+				cout << "You try to go back to the village however night falls to dark , you could try again however it is 12 hours since next light." << endl;
+        cout << "please pick from the options again" << endl;
+				goto attack_choice;
+        
+			}
+		}
 	
-  
-	//They dont wish to go to the swamp which means they must prepare for the next war
-	if (choice_11 == 2){
-    cout << "Instead of going to the swamp... you go back to the main to prepare for the next war" << endl;
-    //you prepare for the next war
-    //IF STATEMENT NEEDS COMPLETING
-    //
-    //
-
-    
-    
-// Comments on the next war that they are going to 
-
-
-
-  cout << "After realising that they are many creatures from unknown sources you have decided that you are going to go back in to the town" << endl;
-	cout << "and grow strong and prepare for the war " << endl;
-	cout << "you are now back in the main town....." << endl;
-  }
+		if (choice_11 == 2) 
+      // above i have ran function back to choice allow user to go back - if they dont this code will run putting them into town
+    {
+			cout << "Instead of going to the swamp... you go back to the main to prepare for the next war" << endl;
+			cout << "After realising that they are many creatures from unknown sources you have decided that you are going to go back in to the town" << endl;
+			cout << "and grow strong and prepare for the war " << endl;
+			cout << "you are now back in the main town....." << endl;
+		}
+	}
 }
-}
+
 
 
 int main(){
