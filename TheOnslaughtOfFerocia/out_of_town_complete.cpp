@@ -166,8 +166,33 @@ int choice_11 = 0, choice_22, choice_33,age;
 				cout << "however after killing the gollum the sky falls dark" << endl;
 				cout << "many more creatures start to approach you" << endl;
         
+          
+{
+ 
+    int radoms ;
+    int creatares[22];
+
+    srand(time(0)); 
+
+    for (int x = 1; x<22;x++) {
+        radoms =  1+(rand()%14); 
+    }
+
+  
+    cout << "1.Amount of Creatures remaining\n2.Hits to kill the Creatures"<<endl;
+        cout << "some creatures with huge hitpoints can not be killed they must be convinsed to change sides"<<endl;
+
+    cout << "Creatures   -  Hits" << endl;
+    for (int x= 0; x<=12; x++){
+        creatares[13]  = radoms;
+      
+       cout << x << "   ------------  " << creatares[x] << endl;
+      
+    }
+}
+
         
-        
+ 
 				cout << "therefore you decide to go back to the main town and prepare for war" << endl;
 				callArt.creatures();
 				//quest2();
