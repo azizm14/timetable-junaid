@@ -2,6 +2,9 @@
 #include <vector>
 #include <string>	
 
+
+//code that calls from another function is to be uncommented.
+
 using namespace std;	
 
 class Art{
@@ -220,4 +223,6 @@ int choice_11 = 0, choice_22, choice_33,age;
 
 int main(){
   out_town();
+  
+  //in order to run the code calling it from a main function, its void as i extracted it from the main code.
 }
