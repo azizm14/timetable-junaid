@@ -1,5 +1,5 @@
 //ASKII ART BY SOURCES FROM https://www.asciiart.eu/mythology/monsters
-//Formatted for game usgae
+//Formatted for game usage
 // by sandeep beedh
 
 {
