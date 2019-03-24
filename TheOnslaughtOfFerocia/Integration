@@ -1,0 +1,43 @@
+include<stdio.h> 
+#include <SQLAPI.h> 
+int main(int argc, char* argv[])
+{
+	SAConnection con;
+	SACommandcmd;
+	try
+	{
+
+		con.Connect("test", "tester", "tester", SA SQL_Client);
+
+		cmd.setConnection(&con);
+
+		cmd.setCommandText("create table characters(name varchar(30) primary key, health int(20), attack int (10), sheild int(5)");
+		cmd.Execute();
+
+		cmd.setCommandText("Insert into characters values (”Gnull”,20, 10, 5 )");
+		cmd.setCommandText("Insert into characters values (”Gollum”,20, 10, 5 )");
+		cmd.setCommandText("Insert into characters values (”Archer”,20, 10, 5 )");
+		cmd.setCommandText("Insert into characters values (”barberian”,20, 10, 5 )");
+		cmd.setCommandText("Insert into characters values (”Swordsman”,20, 10, 5 )");
+		cmd.Execute();
+
+		con.Commit();
+		printf("Table created, row inserted!\n");1
+	}
+
+	catch (SAException &x)
+	{
+
+		try
+		{
+			
+			con.Rollback();
+		}
+		catch (SAException &)
+		{
+		}
+
+
+		printf("%s\n", (const char*)x.ErrText());
+	}
+	return 0;}
